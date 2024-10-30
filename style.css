@@ -1,0 +1,197 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define Light and Dark Theme Variables */
+:root {
+    --bg-color: #bcb9b9;
+    --text-color: #000000;
+    --accent-color: rgb(5, 2, 2);
+    --header-bg: rgb(255, 255, 255);
+    --input-bg: #f0f0f0;
+    --border-color: #ffffff;
+    --gallery-border-color: rgb(255, 255, 255);
+}
+
+body.dark-mode {
+    --bg-color: #0b0b0b;
+    --text-color: aliceblue;
+    --accent-color: red;
+    --header-bg: rgba(20, 20, 20, 0.9);
+    --input-bg: #333;
+    --border-color: #555;
+    --gallery-border-color: aliceblue;
+}
+
+/* Global Styles */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--header-bg);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+header nav a {
+    margin: 0 15px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    color: #f8ff70;
+    padding: 50px;
+    background-image: url('dark-red-grunge-horror-background-loop-free-video.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: background-color 0.3s;
+}
+
+.hero h3 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.hero blockquote {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 20px auto;
+    transition: color 0.3s;
+}
+
+/* Services Section */
+#services {
+    padding: 50px;
+    text-align: center;
+    background-color: var(--bg-color);
+}
+
+.service-box {
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.service-box h3 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 50px;
+    text-align: center;
+    background-color: var(--header-bg);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid var(--gallery-border-color);
+    transition: border-color 0.3s;
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 50px;
+    background-color: var(--header-bg);
+    text-align: center;
+}
+
+.testimonial {
+    margin: 10px 0;
+    font-style: italic;
+}
+
+/* FAQ Section */
+#faq {
+    padding: 50px;
+    background-color: var(--header-bg);
+}
+
+/* Form Section */
+#contact {
+    padding: 50px;
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+form input,
+textarea {
+    padding: 10px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+form input[type="submit"] {
+    background-color: var(--accent-color);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--header-bg);
+    margin-top: 30px;
+}
